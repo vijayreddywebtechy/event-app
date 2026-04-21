@@ -1,15 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {
   Search,
   ChevronRight,
   ChevronLeft,
   ChevronsLeft,
   ChevronsRight,
-  CalendarDays,
-  MapPin,
 } from "lucide-react";
 import type { SingleValue, MultiValue, ActionMeta } from "react-select";
 import MainLayout from "@/components/layout/MainLayout";
@@ -18,6 +15,10 @@ import {
   type FeaturedEventCardData,
 } from "@/components/dynamic/FeaturedEventCard";
 import { EventCard, type EventCardData } from "@/components/dynamic/EventCard";
+import {
+  HorizontalEventCard,
+  type HorizontalEventCardData,
+} from "@/components/dynamic/HorizontalEventCard";
 import CustomSelect, { type SelectOption } from "@/components/dynamic/CustomSelect";
 
 import workshopBanner from "@/assets/images/background/workshop_event_banner.png";
@@ -97,20 +98,9 @@ const eventsForYou: EventCardData[] = [
   },
 ];
 
-interface UpcomingEvent {
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  location: string;
-  coverImage: string;
-  organizers: { name: string; avatar: string }[];
-  href: string;
-}
-
 const EVENT_IMAGES = [workshopBanner.src, bgOne.src, dashboardBg.src];
 
-const allUpcomingEvents: UpcomingEvent[] = Array.from({ length: 9 }, (_, i) => ({
+const allUpcomingEvents: HorizontalEventCardData[] = Array.from({ length: 9 }, (_, i) => ({
   id: String(i + 1),
   title: "The Compound Effect Conference",
   description:
@@ -236,58 +226,11 @@ export default function AttendeeDashboard() {
           {/* Event List */}
           <div className="space-y-4">
             {paginated.map((event) => (
-              <div
+              <HorizontalEventCard
                 key={event.id}
-                className="bg-white rounded-xl overflow-hidden flex flex-col sm:flex-row"
-              >
-                <div className="flex-1 p-6 flex flex-col justify-between min-w-0">
-                  <div>
-                    <h3 className="text-lg md:text-xl font-medium text-neutral-900">
-                      {event.title}
-                    </h3>
-                    <p className="text-sm text-neutral-600 mt-2 line-clamp-2 leading-relaxed">
-                      {event.description}
-                    </p>
-                    <div className="flex -space-x-2 mt-4">
-                      {event.organizers.map((org, i) => (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          key={i}
-                          src={org.avatar}
-                          alt={org.name}
-                          title={org.name}
-                          className="h-8 w-8 rounded-full border-2 border-white object-cover bg-neutral-200"
-                        />
-                      ))}
-                    </div>
-                    <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-neutral-900 mt-3">
-                      <span className="flex items-center gap-1.5">
-                        <CalendarDays className="h-4 w-4 shrink-0" />
-                        {event.date}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <MapPin className="h-4 w-4 shrink-0" />
-                        {event.location}
-                      </span>
-                    </div>
-                  </div>
-                  <Link
-                    href={event.href}
-                    className="inline-flex items-center gap-1 text-sm font-bold text-primary-medium uppercase tracking-wide hover:underline underline-offset-4 mt-5"
-                  >
-                    READ MORE
-                    <ChevronRight className="h-4 w-4 -mt-0.5" />
-                  </Link>
-                </div>
-                <div className="sm:w-[260px] md:w-[320px] shrink-0 bg-neutral-100">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={event.coverImage}
-                    alt={event.title}
-                    className="h-48 sm:h-full w-full object-cover"
-                  />
-                </div>
-              </div>
+                event={event}
+                ctaLabel="READ MORE"
+              />
             ))}
 
             {paginated.length === 0 && (
