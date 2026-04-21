@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { bentonSansPro } from "./fonts";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Event App",
@@ -17,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={bentonSansPro.variable}>
       <body className={`${bentonSansPro.className} antialiased`}>
         {children}
       </body>

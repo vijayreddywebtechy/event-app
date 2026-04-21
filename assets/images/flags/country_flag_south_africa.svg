@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+  <!-- South Africa flag simplified -->
+  <rect width="60" height="40" fill="#007A4D"/>
+  <rect y="0" width="60" height="13.3" fill="#007A4D"/>
+  <rect y="13.3" width="60" height="13.4" fill="#FFB612"/>
+  <rect y="26.7" width="60" height="13.3" fill="#007A4D"/>
+  <polygon points="0,0 0,40 25,20" fill="#000000"/>
+  <polygon points="0,3 0,37 21,20" fill="#FFB612"/>
+  <polygon points="0,8 0,32 16,20" fill="#007A4D"/>
+  <rect y="0" width="60" height="13.3" fill="#007A4D"/>
+  <rect y="13.3" width="60" height="13.4" fill="#FFB612"/>
+  <rect y="26.7" width="60" height="13.3" fill="#007A4D"/>
+  <rect y="0" width="60" height="2" fill="#DE3831"/>
+  <rect y="38" width="60" height="2" fill="#DE3831"/>
+  <rect y="18.5" width="60" height="3" fill="#FFFFFF"/>
+  <polygon points="0,0 0,40 28,20" fill="#000000"/>
+  <polygon points="0,5 0,35 20,20" fill="#FFB612"/>
+  <polygon points="0,10 0,30 14,20" fill="#007A4D"/>
+</svg>
