@@ -38,7 +38,7 @@ const featuredEvent: FeaturedEventCardData = {
     { name: "Sarah Johnson", avatar: profileIcon.src },
     { name: "Mike Chen", avatar: profileIcon.src },
   ],
-  href: "/attendee/preview",
+  href: "/attendee/events/preview",
   ctaLabel: "JOIN NOW",
 };
 
@@ -68,7 +68,7 @@ const allListEvents: HorizontalEventCardData[] = Array.from(
       { name: "Sarah Johnson", avatar: profileIcon.src },
       { name: "Mike Chen", avatar: profileIcon.src },
     ],
-    href: "/attendee/preview",
+    href: "/attendee/events/preview",
   }),
 );
 
@@ -86,7 +86,7 @@ const topicBasedEvents: EventCardData[] = [
       { name: "Sarah Johnson", avatar: profileIcon.src },
       { name: "Mike Chen", avatar: profileIcon.src },
     ],
-    href: "/attendee/preview",
+    href: "/attendee/events/preview",
   },
   {
     id: "t2",
@@ -98,7 +98,7 @@ const topicBasedEvents: EventCardData[] = [
     category: "Workshop",
     coverImage: dashboardBg.src,
     organizers: [{ name: "Sarah Johnson", avatar: profileIcon.src }],
-    href: "/attendee/preview",
+    href: "/attendee/events/preview",
   },
   {
     id: "t3",
@@ -110,7 +110,7 @@ const topicBasedEvents: EventCardData[] = [
     category: "Online",
     coverImage: workshopBanner.src,
     organizers: [{ name: "Sarah Johnson", avatar: profileIcon.src }],
-    href: "/attendee/preview",
+    href: "/attendee/events/preview",
   },
 ];
 
@@ -128,7 +128,7 @@ const specificForYouEvents: EventCardData[] = [
       { name: "Sarah Johnson", avatar: profileIcon.src },
       { name: "Mike Chen", avatar: profileIcon.src },
     ],
-    href: "/attendee/preview",
+    href: "/attendee/events/preview",
   },
   {
     id: "s2",
@@ -140,7 +140,7 @@ const specificForYouEvents: EventCardData[] = [
     category: "Workshop",
     coverImage: dashboardBg.src,
     organizers: [{ name: "Sarah Johnson", avatar: profileIcon.src }],
-    href: "/attendee/preview",
+    href: "/attendee/events/preview",
   },
 ];
 

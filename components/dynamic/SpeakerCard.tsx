@@ -28,10 +28,10 @@ export function SpeakerCard({ speaker }: { speaker: SpeakerCardData }) {
           </div>
         )}
       </div>
-      <div className="p-5 space-y-3">
-        <h3 className="text-xl font-medium text-neutral-950">{speaker.name}</h3>
+      <div className="py-8 px-4 md:px-10 space-y-3">
+        <h3 className="text-lg md:text-[28px] text-neutral-900 leading-snug">{speaker.name}</h3>
         {speaker.bio && (
-          <p className="text-sm leading-relaxed text-neutral-600">{speaker.bio}</p>
+          <p className="text-sm text-neutral-900 leading-relaxed">{speaker.bio}</p>
         )}
         {speaker.link && (
           <a

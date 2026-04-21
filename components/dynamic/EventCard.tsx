@@ -63,7 +63,7 @@ export function EventCard({ event, ctaLabel = "Manage Event" }: EventCardProps) 
                 alt={org.name}
                 title={org.name}
                 fill
-                className="rounded-full border-2 border-white object-cover"
+                className="rounded-full border border-white object-cover bg-neutral-200"
               />
             </div>
           ))}

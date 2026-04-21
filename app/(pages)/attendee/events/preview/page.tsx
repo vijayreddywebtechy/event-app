@@ -114,10 +114,10 @@ export default function EventPreviewPage() {
         </div>
 
         {/* Right: register */}
-        <div className="shrink-0 flex flex-col items-start sm:items-end gap-2">
+        <div className="shrink-0 flex flex-col items-start gap-2">
           <button
             type="button"
-            className="bg-primary text-white text-sm font-bold uppercase tracking-widest px-10 py-3 rounded hover:bg-primary-dark transition-colors"
+            className="bg-primary text-white text-sm font-medium uppercase tracking-widest px-10 py-3 rounded hover:bg-primary-dark transition-colors"
           >
             REGISTER
           </button>
@@ -161,7 +161,7 @@ export default function EventPreviewPage() {
         {/* Speaker */}
         <div>
           <h2 className="text-base font-bold text-neutral-900 mb-5">Speaker</h2>
-          <div className="max-w-[280px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <SpeakerCard speaker={speaker} />
           </div>
         </div>
