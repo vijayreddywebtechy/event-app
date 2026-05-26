@@ -94,29 +94,30 @@ export default function Home() {
             />
 
             {/* platform name */}
-            <h2 className="text-2xl md:text-3xl lg:text-[40px] font-medium text-primary-dark text-center mb-2">
-              {platformConfig.name}
+            <h2 className="text-2xl md:text-3xl lg:text-[40px] lg:leading-tight font-medium text-primary-dark text-center mb-12">
+              {/* {platformConfig.name} */}
+              Event <br/>Management 
             </h2>
-            <p className="text-2xl md:text-3xl text-primary-dark font-normal text-center mb-8">
+            {/* <p className="text-2xl md:text-3xl text-primary-dark font-normal text-center mb-8">
               {platformConfig.subtext}
-            </p>
+            </p> */}
 
             {/* greeting */}
-            <p className="text-xl sm:text-2xl md:text-3xl text-neutral-900 mb-6 md:mb-10">
+            {/* <p className="text-xl sm:text-2xl md:text-3xl text-neutral-900 mb-6 md:mb-10">
               {platformConfig.greeting}
-            </p>
+            </p> */}
 
             {/* action buttons */}
             <div className="w-full space-y-3">
               <Button asChild className="w-full font-medium tracking-widest">
-                <Link href="/dashboard">Sign In</Link>
+                <Link href="/">Sign In</Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 className="w-full font-medium tracking-widest"
               >
-                <Link href="/register">Register</Link>
+                <Link href="/">Register</Link>
               </Button>
             </div>
 
@@ -138,7 +139,7 @@ export default function Home() {
                 variant="outline"
                 className="w-full font-medium tracking-widest"
               >
-                <Link href="/admin/sign-in">Admin Login</Link>
+                <Link href="/dashboard">Admin Login</Link>
               </Button>
             </div>
           </div>
